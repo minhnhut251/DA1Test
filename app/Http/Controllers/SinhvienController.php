@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class SinhvienController extends Controller
 {
     public function index(){
-        return view('sinhvien.index');
+        $sinhvien = sinhvien::all();
+        return view('sinhvien.index', ['sinhvien' => $sinhvien]);
     }
 
     public function them(){

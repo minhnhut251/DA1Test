@@ -8,5 +8,16 @@
 <body>
     <h1>Sinh Viên</h1>
     <div>Danh sách</div>
+    <div>
+        <table>
+            <tr>
+                <th>MSSV</th>
+                <th>Họ tên</th>
+                <th>MSSV</th>
+                <th>MSSV</th>
+                <th>MSSV</th>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
