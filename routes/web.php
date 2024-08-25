@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [SinhvienController::class, 'index'])->name('sinhvien.index');
 Route::get('/them', [SinhvienController::class, 'them'])->name('sinhvien.them');
 Route::post('/', [SinhvienController::class, 'luu'])->name('sinhvien.luu');
+Route::get('/timkiem', [SinhvienController::class, 'timkiem'])->name('sinhvien.timkiem');

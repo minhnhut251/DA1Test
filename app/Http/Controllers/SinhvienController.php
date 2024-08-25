@@ -9,7 +9,7 @@ class SinhvienController extends Controller
 {
     public function index(){
         $dssinhvien = sinhvien::all();
-        return view('sinhvien.index', ['sinhvien' => $dssinhvien]);
+        return view('sinhvien.index', ['dssinhvien' => $dssinhvien]);
     }
 
     public function them(){
@@ -25,10 +25,25 @@ class SinhvienController extends Controller
             'gioitinh'=>'required'
         ]);
         if ($data['gioitinh']=='Nam'){
-            $data['gioitinh']=true;
+            $data['gioitinh']=false;
         }
+        else {$data['gioitinh']=true;}
         $newSinhvien = sinhvien::create($data);
 
         return redirect(route('sinhvien.index'));
+    }
+
+    public function timkiem(Request $request){
+        $search = $request->input('mssv');
+        $results = sinhvien::where('mssv', "$search")->get();
+
+        error_log(print_r($search, TRUE)); 
+        error_log(print_r($results, TRUE)); 
+
+        // sinhvien::query();
+        // $sinhvien = DB::table('sinhviens')->where('mssv', $request['mssv']);
+        // return view('sinhvien.timkiem', ['sinhvien' => $sinhvien]);
+
+        return view('sinhvien.timkiem', ['results' => $results]);
     }
 }
