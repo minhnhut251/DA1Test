@@ -13,10 +13,13 @@
             <tr>
                 <th>MSSV</th>
                 <th>Họ tên</th>
-                <th>MSSV</th>
-                <th>MSSV</th>
-                <th>MSSV</th>
+                <th>Số điện thoại</th>
+                <th>Ngày sinh</th>
+                <th>Giới tính</th>
             </tr>
+            @foreach ($dssinhvien)
+            
+            @endforeach
         </table>
     </div>
 </body>
