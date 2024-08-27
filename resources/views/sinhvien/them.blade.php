@@ -41,12 +41,17 @@
                     <input type="radio" name="gioitinh" value="Nam"/>Nam
                     <input type="radio" name="gioitinh" value="Nữ"/>Nữ
             </div>
-            <div>
-                <input class="btn" type="submit" value="Lưu sinh viên mới"/>
+            <div class="buttons">
+                <div>
+                    <input class="btn" type="submit" value="Lưu sinh viên mới"/>
+                </div>
+                <div>
+                    <input class="btn" type="reset" value="Làm mới"/>
+                </div>
             </div>
         </form>
         <div class="buttons">
-            <button class="btn" onclick="resetform()">Làm mới</button>
+            <!-- <button class="btn" onclick="resetform()">Làm mới</button> -->
             <form action="{{route('sinhvien.index')}}">
                     <button class="btn">Trang chủ</button>
             </form>
